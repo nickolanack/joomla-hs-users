@@ -44,10 +44,10 @@ ul.hs_social_list li.socials.twitter span.icon{
 	background-position:0 0px;
 }
 ul.hs_social_list li.socials.facebook span.icon{
-	background-position:0 -100px;
+	background: url(images/fbook.png);     background-size: 100%;
 }
 ul.hs_social_list li.socials.google span.icon{
-	background-position:0 -200px;
+	background: url(images/gplus.png);     background-size: 100%;
 }
 ul.hs_social_list li.socials.openid span.icon{
 	background-position:0 -300px;
