@@ -1,0 +1,17 @@
+/**
+ * 
+ * The author is Hayato Sugimoto. https://hs-shelf.com
+ * 
+ * @version		1.0.2
+ * @package     Joomla.site	
+ * @subpackage  com_hs_users
+ * @copyright   Copyright (C) 2012 Hayato Sugimoto. All rights reserved.
+ * @license     GNU / GPL version 2 or later
+ */
+.hs_buttons{
+	box-shadow:inset 1px 1px 2px rgba(255,255,255,0.6);
+	border-radius:5px;
+}
+#hidden_change_image{
+	box-shadow:1px 1px 1px 15px rgba(255,255,255,0.12);
+}

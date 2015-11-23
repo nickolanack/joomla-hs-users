@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>com_hs_users</name>
+	<author>Hayato Sugimoto</author>
+	<creationDate>2012-12-23</creationDate>
+	<copyright>(C) 2012 Hayato Sugimoto. All rights reserved.</copyright>
+	<license>GNU / GPL version 2 or later</license>
+	<authorEmail>mail@hs-shelf.com</authorEmail>
+	<authorUrl>mail@hs-shelf.com</authorUrl>
+	<version>1.0.15</version>
+	<description>COM_HS_USERS_XML_DESCRIPTION</description>
+	<!-- <scriptfile>script.php</scriptfile> -->
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<!-- Runs on update; New in 1.6
+	<update>
+	<schemas>
+	<schemapath type="mysql">sql/updates/mysql</schemapath>
+	</schemas>
+	</update>
+	-->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>hs_users.php</filename>
+		<filename>defs.php</filename>
+		<folder>asset</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB.com_hs_users.ini</language>
+		<language tag="ja-JP">ja-JP.com_hs_users.ini</language>
+	</languages>
+
+	
+	<administration>
+		<menu img="class:users">hs_users</menu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>script.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>hs_users.php</filename>
+			<folder>asset</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>sql</folder>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_hs_users.ini</language>
+			<language tag="en-GB">en-GB.com_hs_users.sys.ini</language>
+			<language tag="ja-JP">ja-JP.com_hs_users.ini</language>
+			<language tag="ja-JP">ja-JP.com_hs_users.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

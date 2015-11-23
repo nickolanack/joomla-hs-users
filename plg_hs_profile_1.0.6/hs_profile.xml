@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="user" method="upgrade">
+	<name>plg_user_hs_profile</name>
+	<author>Hayato Sugimoto</author>
+	<creationDate>2012-12-01</creationDate>
+	<copyright>(C) 2012 Hayato Sugimoto. All rights reserved.</copyright>
+	<license>GNU GPL version 2 or later</license>
+	<authorEmail>mail@hs-shelf.com</authorEmail>
+	<authorUrl>hs-shelf.com</authorUrl>
+	<version>1.0.6</version>
+	<description>PLG_USER_HS_PROFILE_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<filename plugin="hs_profile">hs_profile.php</filename>
+		<filename>index.html</filename>
+		<folder>profiles</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>fields</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_user_hs_profile.ini</language>
+		<language tag="en-GB">en-GB.plg_user_hs_profile.sys.ini</language>
+		<language tag="ja-JP">ja-JP.plg_user_hs_profile.ini</language>
+		<language tag="ja-JP">ja-JP.plg_user_hs_profile.sys.ini</language>
+	</languages>
+	
+	
+	
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic"
+				addfieldpath="/administrator/components/com_hs_users/models/fields">
+
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

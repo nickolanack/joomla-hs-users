@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_hs_users</name>
+	<author>Hayato Project</author>
+	<creationDate>2012-12-24</creationDate>
+	<copyright>Copyright (C) 2012 Hayhato Sugimoto. All rights reserved.</copyright>
+	<license>GNU GPL version 2 or later</license>
+	<authorEmail>mail@hs-shelf.com</authorEmail>
+	<authorUrl>hs-shelf.com</authorUrl>
+	<version>1.0.7</version>
+	<description>MOD_HS_USERS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_hs_users">mod_hs_users.php</filename>
+		<folder>tmpl</folder>
+		<folder>helpers</folder>
+		<folder>images</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_hs_users.xml</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.mod_hs_users.ini</language>
+		
+		<language tag="en-GB">en-GB.mod_hs_users.sys.ini</language>
+		<language tag="ja-JP">ja-JP.mod_hs_users.ini</language>
+		<language tag="ja-JP">ja-JP.mod_hs_users.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LOGIN" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="hide_default_form"
+					type="list"
+					default="0"
+					label="MOD_HS_USERS_FIELD_HIDE_DEFAULT_FORM_LABEL"
+					description="MOD_HS_USERS_FIELD_HIDE_DEFAULT_FORM_DESC">
+					<option
+						value="0">JHide</option>
+					<option
+						value="1">JShow</option>
+				</field>	
+					
+				<field
+					name="display_links"
+					type="list"
+					default="0"
+					label="MOD_HS_USERS_FIELD_DISPLAY_LINKS_LABEL"
+					description="MOD_HS_USERS_FIELD_DISPLAY_LINKS_DESC">
+					<option
+						value="0">JHide</option>
+					<option
+						value="1">JShow</option>
+				</field>				
+				
+				<field
+					name="pretext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_HS_USERS_FIELD_PRE_TEXT_LABEL"
+					description="MOD_HS_USERS_FIELD_PRE_TEXT_DESC" />
+				<field
+					name="posttext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_HS_USERS_FIELD_POST_TEXT_LABEL"
+					description="MOD_HS_USERS_FIELD_POST_TEXT_DESC" />
+				<field
+					name="login"
+					type="menuitem"
+					disable="separator"
+					label="MOD_HS_USERS_FIELD_LOGIN_REDIRECTURL_LABEL"
+					description="MOD_HS_USERS_FIELD_LOGIN_REDIRECTURL_DESC" >
+					<option
+						value="">JDEFAULT</option>
+				</field>
+				<field
+					name="logout"
+					type="menuitem"
+					disable="separator"
+					label="MOD_HS_USERS_FIELD_LOGOUT_REDIRECTURL_LABEL"
+					description="MOD_HS_USERS_FIELD_LOGOUT_REDIRECTURL_DESC" >
+					<option
+						value="">JDEFAULT</option>
+				</field>
+				<field
+					name="user_photo"
+					type="radio"
+					default="1"
+					label="MOD_HS_USERS_FIELD_USERPHOTO_LABEL"
+					description="MOD_HS_USERS_FIELD_USERPHOTO_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>				
+				
+				<field
+					name="greeting"
+					type="radio"
+					default="1"
+					label="MOD_HS_USERS_FIELD_GREETING_LABEL"
+					description="MOD_HS_USERS_FIELD_GREETING_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+				<field
+					name="name"
+					type="list"
+					default="0"
+					label="MOD_HS_USERS_FIELD_NAME_LABEL"
+					description="MOD_HS_USERS_FIELD_NAME_DESC">
+					<option
+						value="0">MOD_HS_USERS_VALUE_NAME</option>
+					<option
+						value="1">MOD_HS_USERS_VALUE_USERNAME</option>
+				</field>
+				<field
+					name="usesecure"
+					type="radio"
+					default="0"
+					label="MOD_HS_USERS_FIELD_USESECURE_LABEL"
+					description="MOD_HS_USERS_FIELD_USESECURE_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

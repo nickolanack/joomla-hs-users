@@ -1,0 +1,55 @@
+/* Social Icons */
+ul.hs_social_list li.icon{
+	border:none;
+	padding:0;
+	margin:0;
+	display:block;	
+}
+ul.hs_social_list li.icon a,
+ul.hs_social_list li.icon span{
+	border:none;
+	padding:0;
+	margin:0;
+	display:block;
+	height:30px;
+	line-height:30px;
+	background:url(images/socials30.png) 0 1000px no-repeat;
+	padding-left:35px;
+	margin-bottom:10px;
+}
+ul.hs_social_list li.icon.twitter a,
+ul.hs_social_list li.icon.twitter span{
+	background-position:0 0px;
+}
+ul.hs_social_list li.icon.facebook a,
+ul.hs_social_list li.icon.facebook span{
+	background-position:0 -100px;
+}
+ul.hs_social_list li.icon.google a,
+ul.hs_social_list li.icon.google span{
+	background-position:0 -200px;
+}
+ul.hs_social_list li.icon.openid a,
+ul.hs_social_list li.icon.openid span{
+	background-position:0 -300px;
+}
+ul.hs_social_list li.icon.foursquare a,
+ul.hs_social_list li.icon.foursquare span{
+	background-position:0 -400px;
+}
+ul.hs_social_list li.icon.linkedin a,
+ul.hs_social_list li.icon.linkedin span{
+	background-position:0 -500px;
+}
+ul.hs_social_list li.icon.myspace a,
+ul.hs_social_list li.icon.myspace span{
+	background-position:0 -600px;
+}
+ul.hs_social_list li.icon.aol a,
+ul.hs_social_list li.icon.aol span{
+	background-position:0 -700px;
+}
+ul.hs_social_list li.icon.yahoo a,
+ul.hs_social_list li.icon.yahoo span{
+	background-position:0 -800px;
+}

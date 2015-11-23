@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="userextended" addfieldpath="administrator/components/com_hs_users/models/fields" label="COM_HS_USERS_FORM_LABEL">
+		<field name="id"
+			type="hidden"
+			description="COM_HS_USERS_FORMS_ITEM_ID_DESC"
+			label="COM_HS_USERS_FORMS_ITEM_ID_LABEL"
+		/>
+		
+		<field name="user_id"
+			type="text"
+			description="COM_HS_USERS_FORMS_ITEM_USER_ID_DESC"
+			label="COM_HS_USERS_FORMS_ITEM_USER_ID_LABEL"
+		/>			
+		<field name="created_at"
+			type="date"
+			description="COM_HS_USERS_FORMS_ITEM_CREATED_AT_DESC"
+			label="COM_HS_USERS_FORMS_ITEM_CREATED_AT_LABEL"
+		/>		
+
+		<field name="image_path"
+			type="text"
+			description="COM_HS_USERS_FORMS_IMAGE_PATH_DESC"
+			label="COM_HS_USERS_FORMS_IMAGE_PATH_LABEL" />
+			
+		<field name="external"
+			type="list"
+			description="COM_HS_USERS_FORMS_EXTERNAL_DESC"
+			label="COM_HS_USERS_FORMS_EXTERNAL_LABEL">
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+		</field>					
+		<field name="desc"
+			type="textarea"
+			description="COM_HS_USERS_FORMS_EXTERNAL_DESC_DESC"
+			label="COM_HS_USERS_FORMS_EXTERNAL_DESC_LABEL" />											
+									
+	</fieldset>
+</form>

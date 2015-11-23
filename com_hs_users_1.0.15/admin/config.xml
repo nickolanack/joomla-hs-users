@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="component"		
+		label="COM_HS_USERS_CONFIG_FIELDSET_SOCIALS_LABEL"
+		description="COM_HS_USERS_CONFIG_FIELDSET_SOCIALS_DESC"
+		addfieldpath="administrator/components/com_hs_users/models/fields"
+		>
+		
+		<field
+ 			name=""
+ 			type="spacer"
+		/>	
+		
+		<field
+ 			name=""
+ 			label="COM_HS_USERS_CONFIG_FIELD_REDIRECTURL_LABEL"
+ 			type="redirecturl"
+ 			explain="true"
+		/>	
+		
+				
+		<!-- FACEBOOK  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>			
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+ 			
+			label="COM_HS_USERS_CONFIG_FIELD_FACEBOOK_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		
+		<field
+			name="enable_facebook"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_FACEBOOK_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+ 			name="appid_facebook"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPID_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_facebook"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>				
+		
+		<!-- TWITTER  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>			
+		
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+			label="COM_HS_USERS_CONFIG_FIELD_TWITTER_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		
+		<field
+			name="enable_twitter"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+ 			name="appkey_twitter"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPKEY_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_twitter"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>		
+
+		<!-- GOOGLE  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>	
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+			label="COM_HS_USERS_CONFIG_FIELD_GOOGLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		<field
+ 			name=""
+ 			label="COM_HS_USERS_CONFIG_FIELD_REDIRECTURL_LABEL"
+ 			type="redirecturl"
+ 			provider="Google"
+		/>			
+		<field
+			name="enable_google"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+ 			name="appid_google"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPID_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_google"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>			
+		
+		
+		<!-- YAHOO  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>	
+
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+			label="COM_HS_USERS_CONFIG_FIELD_YAHOO_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		
+		<field
+			name="enable_yahoo"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+ 			name="appkey_yahoo"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPID_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_yahoo"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>		
+
+		<!-- WINDOWS  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>	
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+			label="COM_HS_USERS_CONFIG_FIELD_WINDOWS_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		
+		<field
+			name="enable_live"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+ 			name="appid_live"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPID_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_live"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>	
+		
+		<!-- LinkedIn  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>	
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+			label="COM_HS_USERS_CONFIG_FIELD_LINKEDIN_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		
+		<field
+			name="enable_linkedin"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+ 			name="appkey_linkedin"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPKEY_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_linkedin"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>	
+		
+		
+		<!-- FOURSQUARE  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>	
+
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+			label="COM_HS_USERS_CONFIG_FIELD_FOURSQUARE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		
+		<field
+			name="enable_foursquare"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+ 			name="appid_foursquare"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPID_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_foursquare"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>	
+
+
+		<!-- My Space  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>	
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+			label="COM_HS_USERS_CONFIG_FIELD_MYSPACE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		
+		<field
+			name="enable_myspace"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+ 			name="appkey_myspace"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPKEY_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_myspace"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>	
+		
+		
+		<!-- OPENID  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>			
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+			label="COM_HS_USERS_CONFIG_FIELD_OPENID_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		
+		<field
+			name="enable_openid"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<!--
+		<field
+ 			name="appid_openid"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPID_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_openid"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>	
+		-->
+		
+		<!-- AOL  -->
+		<field
+ 			name=""
+ 			type="spacer"
+		/>	
+		<field
+ 			name=""
+ 			type="spacer"
+ 			class="social_title"
+			label="COM_HS_USERS_CONFIG_FIELD_AOL_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>				
+		
+		<field
+			name="enable_aol"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_HS_USERS_CONFIG_FIELD_ENABLE_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_ENABLE_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<!--
+		<field
+ 			name="appid_aol"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPID_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPID_DESC"
+		/>		
+		<field
+ 			name="appsecret_aol"
+ 			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_APPSECRET_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_APPSECRET_DESC"
+		/>	
+		-->		
+	</fieldset>
+
+
+ 	<fieldset
+		name="setting"
+		label="COM_HS_USERS_CONFIG_FIELDSET_SETTING_LABEL"
+		description="COM_HS_USERS_CONFIG_FIELDSET_SETTING_DESC">
+ 		<field
+ 			name="redirect_url_after_login"
+			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_REDIRECT_URL_AFTER_LOGIN_LABEL"
+			default=""
+			description="COM_HS_USERS_CONFIG_FIELD_REDIRECT_URL_AFTER_LOGIN_DESC"
+		/>
+ 				
+ 	    <field
+			name="hide_default_form"
+			type="radio"
+			class="btn-group"
+			default="show"
+			label="COM_HS_USERS_CONFIG_FIELD_HIDE_DEFAULT_FORM_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_HIDE_DEFAULT_FORM_DESC">
+			<option
+				value="hide">JHIDE</option>
+			<option
+				value="show">JSHOW</option>			
+		</field>
+		
+ 	    
+		<field
+			name="force_login"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_HS_USERS_CONFIG_FIELD_FORCE_LOGIN_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_FORCE_LOGIN_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>			
+		</field>
+		
+		<field
+			name="multiple_connection"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_HS_USERS_CONFIG_FIELD_MULTIPLE_CONNECTION_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_MULTIPLE_CONNECTION_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>			
+		</field>
+
+		<field
+			name="debug"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_HS_USERS_CONFIG_FIELD_DEBUG_LABEL"
+			description="COM_HS_USERS_CONFIG_FIELD_DEBUG_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+
+ 		<field
+ 			name="debug_file"
+			type="text"
+			label="COM_HS_USERS_CONFIG_FIELD_DEBUG_PATH_LABEL"
+			default="/components/com_hs_users/debug.txt"
+			description="COM_HS_USERS_CONFIG_FIELD_DEBUG_PATH_DESC"
+		/>
+
+
+	</fieldset>
+
+<!-->	
+ 	<fieldset
+		name="debug"
+		label="COM_HS_USERS_CONFIG_FIELDSET_DEBUG_LABEL"
+		description="COM_HS_USERS_CONFIG_FIELDSET_DEBUG_DESC">
+	</fieldset>
+-->
+
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			filter="rules"
+			validate="rules"
+			component="com_users"
+			section="component" />
+	</fieldset>
+</config>

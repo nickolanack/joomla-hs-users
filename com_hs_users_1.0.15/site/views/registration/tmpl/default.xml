@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_HS_USERS_REGISTRATION_VIEW_DEFAULT_TITLE" option="COM_HS_USERS_REGISTRATION_VIEW_DEFAULT_OPTION">
+		<help
+			key="JHELP_MENUS_MENU_ITEM_USER_REGISTRATION"
+		/>
+		<message>
+			<![CDATA[COM_HS_USERS_REGISTRATION_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+
+		<!-- Basic options. -->
+		<fieldset name="params"
+			label="COM_HS_USERS_BASIC_OPTIONS_FIELDSET_LABEL"
+		>
+			<field name="hide_default_form"
+				type="list"
+				default="show"
+				description="COM_HS_USERS_FIELD_HIDE_DEFAULT_FORM_DESC"
+				label="COM_HS_USERS_FIELD_HIDE_DEFAULT_FORM_LABEL"
+			>
+				<option value="show">JSHOW</option>
+				<option value="hide">JHIDE</option>
+			</field>		
+		</fieldset>
+	</fields>	
+</metadata>

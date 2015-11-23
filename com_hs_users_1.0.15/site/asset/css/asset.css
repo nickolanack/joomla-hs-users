@@ -1,0 +1,156 @@
+/**
+ * 
+ * The author is Hayato Sugimoto. https://hs-shelf.com
+ * 
+ * @version		1.0.15
+ * @package     Joomla.site	
+ * @subpackage  com_hs_users
+ * @copyright   Copyright (C) 2013 Hayato Sugimoto. All rights reserved.
+ * @license     GNU / GPL version 2 or later
+ */
+.clear{
+	clear:both;
+}
+/* Social Icons */
+ul.hs_social_list li.socials{
+	border:none;
+	padding:0;
+	margin:0;
+	display:block;	
+	margin-bottom:15px;
+}
+ul.hs_social_list li.socials a.hbox,
+ul.hs_social_list li.socials span.hbox{
+	position:relative;
+	border:none;
+	padding:0;
+	margin:0;
+	display:block;
+	height:30px;
+	line-height:30px;
+	
+	padding-left:35px;
+	
+}
+ul.hs_social_list li.socials span.icon{
+	width:30px;
+	height:30px;
+	display:block;
+	background:url(images/socials30b.png) 0 1000px no-repeat;
+	position:absolute;
+	left:0;
+}
+ul.hs_social_list li.socials.twitter span.icon{
+	background-position:0 0px;
+}
+ul.hs_social_list li.socials.facebook span.icon{
+	background-position:0 -100px;
+}
+ul.hs_social_list li.socials.google span.icon{
+	background-position:0 -200px;
+}
+ul.hs_social_list li.socials.openid span.icon{
+	background-position:0 -300px;
+}
+ul.hs_social_list li.socials.foursquare span.icon{
+	background-position:0 -400px;
+}
+ul.hs_social_list li.socials.linkedin span.icon{
+	background-position:0 -500px;
+}
+ul.hs_social_list li.socials.myspace span.icon{
+	background-position:0 -600px;
+}
+ul.hs_social_list li.socials.aol span.icon{
+	background-position:0 -700px;
+}
+ul.hs_social_list li.socials.yahoo span.icon{
+	background-position:0 -800px;
+}
+
+
+/*
+ * Connection
+ */
+ul.hs_social_list li.socials .connected{
+	color:#999;
+}
+ul.hs_social_list li.socials .connected span.icon{
+	background:url(images/socials30b.png) 100% 1000px no-repeat;
+}
+ul.hs_social_list li.socials.twitter .connected span.icon{
+	background-position:100% 0px;
+}
+ul.hs_social_list li.socials.facebook .connected span.icon{
+	background-position:100% -100px;
+}
+ul.hs_social_list li.socials.google .connected span.icon{
+	background-position:100% -200px;
+}
+ul.hs_social_list li.socials.openid .connected span.icon{
+	background-position:100% -300px;
+}
+ul.hs_social_list li.socials.foursquare .connected span.icon{
+	background-position:100% -400px;
+}
+ul.hs_social_list li.socials.linkedin .connected span.icon{
+	background-position:100% -500px;
+}
+ul.hs_social_list li.socials.myspace .connected span.icon{
+	background-position:100% -600px;
+}
+ul.hs_social_list li.socials.aol .connected span.icon{
+	background-position:100% -700px;
+}
+ul.hs_social_list li.socials.yahoo .connected span.icon{
+	background-position:100% -800px;
+}
+
+
+/*
+ * Openid
+ */
+div#hsu_fake{
+	position:fixed;
+	background-color:#000;
+	top:0;
+	left:0;
+	z-index:1000;
+}
+div#hsu_actual{
+	position:absolute;
+	background-color:#FFF;
+	padding:30px;
+	width:300px;
+	z-index:1001;
+}
+
+
+/*
+ * Views
+ */
+
+.hs_users_divider{
+	float:left;
+	width:50%;
+}
+.hs_users_divider.hs_left .hs_inner{
+	padding-right:30px;
+}
+.hs_users_divider.hs_right .hs_inner{
+	
+}
+
+/**
+ * Redesign default template	
+ * 
+ */
+body.com_hs_users div.container main#content .form-horizontal .control-label{
+	text-align:left;
+}
+body.com_hs_users div.container main#content div.controls{
+	margin-left:0;
+}
+body.com_hs_users div.container main#content ul.breadcrumb{
+	clear:both;
+}

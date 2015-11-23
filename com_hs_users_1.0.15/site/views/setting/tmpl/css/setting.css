@@ -1,0 +1,71 @@
+/**
+ * 
+ * The author is Hayato Sugimoto. https://hs-shelf.com
+ * 
+ * @version		1.0.2
+ * @package     Joomla.site	
+ * @subpackage  com_hs_users
+ * @copyright   Copyright (C) 2012 Hayato Sugimoto. All rights reserved.
+ * @license     GNU / GPL version 2 or later
+ */
+#user_image_box{
+	border:1px solid #EEE;
+	background-color:#EFEFEF;
+	padding:5px;
+	width:50px;
+	float:left;
+}
+
+
+#hs_uploadbox{
+	float:left;
+	margin-left:15px;
+	position:relative;
+}
+.hs_buttons{
+	width:120px;
+	background-color:#E1E1E1;
+	border:#EEE;
+	padding:3px 8px;
+	text-align:center;
+	cursor:pointer;
+	color:#999999;
+	margin-bottom:8px;
+}
+.hs_buttons:hover{
+	background-color:#CECECE;
+	color:#707070;
+}
+#hidden_change_image{
+	display:none;
+	background-color:#F9F9F9;
+	padding:20px 30px;
+}
+
+h3.inner_title{
+	font-size:13px;
+	font-weight:bold;
+	margin-bottom:1em;
+}
+
+/* Desc */
+#hsuser_desc{
+	margin:1.5em 0;
+}
+#hs_notext{
+	display:none;
+}
+textarea.hs_desc_textarea{
+	display:none;
+	min-width:300px;
+	min-height:100px;
+}
+
+
+/*Style */
+div.setting_box{
+	margin-bottom:1.5em;
+}
+div.setting_box h3.box_title{
+	margin-bottom:0.5em;
+}	

@@ -1,0 +1,36 @@
+/**
+ * 
+ * The author is Hayato Sugimoto. https://hs-shelf.com
+ * 
+ * @version		1.0.2
+ * @package 	pkg_hs_users
+ * @subpackage  plg_user_hs_profile
+ * @copyright   Copyright (C) 2012 Hayato Sugimoto. All rights reserved.
+ * @license     GNU / GPL version 2 or later
+ */
+.clear{
+	clear:both;
+}
+ul.hs_socials_list,
+ul.hs_socials_list li{
+	list-style: none;
+	margin:0;
+}
+ul.hs_socials_list li,
+ul.adminformlist ul.hs_socials_list li{
+	float:left;
+	margin-right:8px;
+	background-color:#EEE;
+	border:1px solid #EEE;
+	padding:5px 8px;
+	cursor:pointer;
+	color:#999;
+}
+ul.hs_socials_list li:hover,
+ul.adminformlist ul.hs_socials_list li:hover,
+ul.hs_socials_list li.current,
+ul.adminformlist ul.hs_socials_list li.current{
+	color:#666;
+	border:1px solid #999;
+	background-color:#EFEFEF;
+}

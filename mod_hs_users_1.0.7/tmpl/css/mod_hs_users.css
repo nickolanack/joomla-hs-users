@@ -1,0 +1,54 @@
+/**
+ * 
+ * The author is Hayato Sugimoto. https://hs-shelf.com
+ * 
+ * @version		1.0.2
+ * @subpackage  mod_hs_users
+ * @copyright   Copyright (C) 2012 Hayato Sugimoto. All rights reserved.
+ * @license     GNU / GPL version 2 or later
+ */
+.clear{
+	clear:both;
+}
+.hs_user_photo_box{
+	float:left;
+	margin-right:6px;
+	border:1px solid #DDD;
+	background-color:#EFEFEF;
+}
+.hs_user_photo_box .inner{
+	padding:2px;
+	width:50px;
+	height:50px;	
+}
+.username_box{
+}
+
+/*
+ * Design 2
+ */
+.user_name{
+	font-size:1.2em;
+	height:28px;
+	line-height:28px;	
+	display:block;
+}
+/*
+.btn.logout{
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+	height:28px;
+	line-height:28px;		
+	cursor:pointer;
+}
+
+.btn.logout:hover{
+	text-decoration:underline;
+}
+*/
+/* Box */
+.hs_users_socials{
+	margin:1em 0;
+}

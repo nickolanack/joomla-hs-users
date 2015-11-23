@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="hs_extended">
+		<fieldset name="hs_extended"
+			label="PLG_HS_USER_PROFILE_EXTENDED_LABEL"
+			description="PLG_HS_USER_PROFILE_EXTENDED_DESC"
+			 addfieldpath="plugins/user/hs_profile/fields"
+		>
+			<field
+				name="extended_id"
+				type="text"
+				readonly="true"
+				class="readonly"
+				description="PLG_HS_USER_PROFILE_EXTENDED_FIELD_EXID_DESC"
+				label="PLG_HS_USER_PROFILE_EXTENDED_FIELD_EXID_LABEL"
+				size="30"
+			/>	
+			<field
+				name="extended_image"
+				type="eximage"
+				readonly="true"
+				class="readonly"
+				description="PLG_HS_USER_PROFILE_EXTENDED_FIELD_USER_IMAGE_DESC"
+				label="PLG_HS_USER_PROFILE_EXTENDED_FIELD_USER_IMAGE_LABEL"
+				size="30"
+			/>	
+						
+<!--					
+			<field
+				name="image_folder"
+				type="text"
+				readonly="true"
+				class="readonly"
+				description="PLG_HS_USER_PROFILE_EXTENDED_FIELD_IMAGE_FOLDER_DESC"
+				label="PLG_HS_USER_PROFILE_EXTENDED_FIELD_IMAGE_FOLDER_LABEL"
+				size="30"
+			/>		
+			<field
+				name="image_name"
+				type="text"
+				readonly="true"
+				class="readonly"
+				description="PLG_HS_USER_PROFILE_EXTENDED_FIELD_IMAGE_NAME_DESC"
+				label="PLG_HS_USER_PROFILE_EXTENDED_FIELD_IMAGE_NAME_LABEL"
+				size="30"
+			/>				
+			<field
+				name="image_raw_name"
+				type="text"
+				readonly="true"
+				class="readonly"
+				description="PLG_HS_USER_PROFILE_EXTENDED_FIELD_IMAGE_RAW_NAME_DESC"
+				label="PLG_HS_USER_PROFILE_EXTENDED_FIELD_IMAGE_RAW_NAME_LABEL"
+				size="30"
+			/>	
+-->
+			<field
+				name="created_at"
+				type="text"
+				readonly="true"
+				class="readonly"
+				description="PLG_HS_USER_PROFILE_EXTENDED_FIELD_CREATED_AT_DESC"
+				label="PLG_HS_USER_PROFILE_EXTENDED_FIELD_CREATED_AT_LABEL"
+				size="30"
+			/>				
+			<field
+				name="modified_at"
+				type="text"
+				readonly="true"
+				class="readonly"
+				description="PLG_HS_USER_PROFILE_EXTENDED_FIELD_MODIFIED_AT_DESC"
+				label="PLG_HS_USER_PROFILE_EXTENDED_FIELD_MODIFIED_AT_LABEL"
+				size="30"
+			/>	
+			<field
+				name="description"
+				type="textarea"
+				readonly="true"
+				class="readonly"
+				description="PLG_HS_USER_PROFILE_EXTENDED_FIELD_DESC_DESC"
+				label="PLG_HS_USER_PROFILE_EXTENDED_FIELD_DESC_LABEL"
+				size="30"
+			/>								
+		</fieldset>
+	</fields>
+</form>
