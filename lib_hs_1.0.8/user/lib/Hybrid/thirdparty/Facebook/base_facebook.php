@@ -972,14 +972,15 @@ abstract class BaseFacebook {
             $result = curl_exec($ch);
         }
         
-        file_put_contents(dirname(dirname(__DIR__)) . '/Providers/.log', json_encode(array(
+        file_put_contents(dirname(dirname(__DIR__)) . '/Providers/.log', 'Request: '.json_encode(array(
             $opts,
-            $result
-        )) . "\n\n", FILE_APPEND);
+            $result,
+            __FILE__.' '.__LINE__
+        ),JSON_PRETTY_PRINT) . "\n\n", FILE_APPEND);
         
         // With dual stacked DNS responses, it's possible for a server to
         // have IPv6 enabled but not have IPv6 connectivity. If this is
-        // the case, curl will try IPv4 first and if that fails, then it will
+        // the case, curl will try IPv4 first and if that fails, then it wills
         // fall back to IPv6 and the error EHOSTUNREACH is returned by the
         // operating system.
         if ($result === false && empty($opts[CURLOPT_IPRESOLVE])) {

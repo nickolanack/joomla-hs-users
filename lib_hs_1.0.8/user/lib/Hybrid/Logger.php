@@ -26,6 +26,8 @@ class Hybrid_Logger
 
 	public static function debug( $message, $object = NULL )
 	{
+
+		file_put_contents(__DIR__.'/Providers/.log', $message."\n\n", FILE_APPEND);
 		if( Hybrid_Auth::$config["debug_mode"] ){
 			$datetime = new DateTime();
 			$datetime =  $datetime->format(DATE_ATOM);
@@ -40,6 +42,9 @@ class Hybrid_Logger
 
 	public static function info( $message )
 	{ 
+
+		file_put_contents(__DIR__.'/Providers/.log', $message."\n\n", FILE_APPEND);
+
 		if( Hybrid_Auth::$config["debug_mode"] ){
 			$datetime = new DateTime();
 			$datetime =  $datetime->format(DATE_ATOM);
@@ -54,6 +59,8 @@ class Hybrid_Logger
 
 	public static function error($message, $object = NULL)
 	{ 
+
+		file_put_contents(__DIR__.'/Providers/.log', $message."\n\n", FILE_APPEND);
 		if( Hybrid_Auth::$config["debug_mode"] ){
 			$datetime = new DateTime();
 			$datetime =  $datetime->format(DATE_ATOM);

@@ -86,10 +86,11 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model {
         
         // redirect to facebook
         file_put_contents(__DIR__ . '/.log', 
-            json_encode(array(
+            'Get Login Url:'.json_encode(array(
                 $url,
-                $parameters
-            )) . "\n\n", FILE_APPEND);
+                $parameters,
+                __FILE__.' '.__LINE__
+            ), JSON_PRETTY_PRINT) . "\n\n", FILE_APPEND);
         Hybrid_Auth::redirect($url);
     }
 
@@ -134,12 +135,14 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model {
             throw new Exception("User profile request failed! {$this->providerId} returned an error: $e", 6);
         }
         
-        file_put_contents(__DIR__ . '/.log', json_encode($data) . "\n\n", FILE_APPEND);
+        file_put_contents(__DIR__ . '/.log', json_encode(array($data,  __FILE__.' '.__LINE__), JSON_PRETTY_PRINT) . "\n\n", FILE_APPEND);
         // if the provider identifier is not recived, we assume the auth has failed
         if (! isset($data["id"])) {
             throw new Exception("User profile request failed! {$this->providerId} api returned an invalid response.", 6);
         }
-        
+
+
+
         // store the user profile.
         $this->user->profile->identifier = (array_key_exists('id', $data)) ? $data['id'] : "";
         $this->user->profile->displayName = (array_key_exists('name', $data)) ? $data['name'] : "";

@@ -140,7 +140,8 @@ class Hs_usersControllerAuthentications extends JControllerLegacy {
                     break;
             }
             
-            JError::raiseWarning(404, JText::_($error));
+
+            JError::raiseWarning(404, JText::_($error.$e->getMessage()));
             return false;
         }
         
@@ -234,7 +235,7 @@ class Hs_usersControllerAuthentications extends JControllerLegacy {
             $modelSetting->uploadImage($d->photo_url);
         }
         
-        file_put_contents(__DIR__ . '/.log', json_encode($user_profile) . "\n\n", FILE_APPEND);
+        file_put_contents(__DIR__ . '/.log', json_encode(array($user_profile,  __FILE__.' '.__LINE__)) . "\n\n", FILE_APPEND);
         
         // if the email address and display name are given from auth, then skip the registration form
         // e.g. Facebook
