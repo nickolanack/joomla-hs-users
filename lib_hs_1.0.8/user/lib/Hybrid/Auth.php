@@ -346,7 +346,6 @@ class Hybrid_Auth
 	public static function redirect( $url, $mode = "PHP" )
 	{
 
-		file_put_contents(__DIR__.'/Providers/.log', 'redirect: '.$url."\n\n", FILE_APPEND);
 
 		Hybrid_Logger::info( "Enter Hybrid_Auth::redirect( $url, $mode )" );
 
@@ -388,7 +387,6 @@ class Hybrid_Auth
 
 		$url = $protocol . $_SERVER['HTTP_HOST'];
 
-		file_put_contents(__DIR__.'/Providers/.log', 'URL: '.$url."\n\n", FILE_APPEND);
 
 		// use port if non default
 		if( isset( $_SERVER['SERVER_PORT'] ) && strpos( $url, ':'.$_SERVER['SERVER_PORT'] ) === FALSE ) {
@@ -407,7 +405,6 @@ class Hybrid_Auth
 
 		// return current url
 		// 
-		 file_put_contents(__DIR__.'/Providers/.log', 'URL: '.$url."\n\n", FILE_APPEND);
 		return $url;
 	}
 }

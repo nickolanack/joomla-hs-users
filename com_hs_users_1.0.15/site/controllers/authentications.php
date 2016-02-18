@@ -52,13 +52,11 @@ class Hs_usersControllerAuthentications extends JControllerLegacy {
         if (isset($returnUrlRaw)) {
             $returnUrl = base64_decode($returnUrlRaw);
         }
-        
-        file_put_contents(__DIR__ . '/.log', $returnUrl . "\n\n", FILE_APPEND);
+
         
         if (! $user->guest) {
             $msg = JText::_('COM_HS_USERS_ERROR_YOU_ALREADY_LOGINED');
             
-            file_put_contents(__DIR__ . '/.log', 'redirect guest' . "\n\n", FILE_APPEND);
             $app->redirect(JRoute::_($returnUrl), $msg);
             return;
         }
@@ -161,7 +159,6 @@ class Hs_usersControllerAuthentications extends JControllerLegacy {
             // login
             $modelAuthentication->login($user_id);
             
-            file_put_contents(__DIR__ . '/.log', 'redirect login' . "\n\n", FILE_APPEND);
             $app->redirect($returnUrl);
             return;
         }
@@ -235,8 +232,6 @@ class Hs_usersControllerAuthentications extends JControllerLegacy {
             $modelSetting->uploadImage($d->photo_url);
         }
         
-        file_put_contents(__DIR__ . '/.log', json_encode(array($user_profile,  __FILE__.' '.__LINE__)) . "\n\n", FILE_APPEND);
-        
         // if the email address and display name are given from auth, then skip the registration form
         // e.g. Facebook
         if (mb_strlen($d->email) > 0 && mb_strlen($d->display_name) > 0) {
@@ -298,7 +293,6 @@ class Hs_usersControllerAuthentications extends JControllerLegacy {
                     
                     // login
                     $ck = $modelAuthentication->login($user_id);
-                    file_put_contents(__DIR__ . '/.log', 'no redirect force login' . "\n\n", FILE_APPEND);
                     $app->redirect($returnUrl);
                     return;
                     if ($ck === false) {
@@ -312,7 +306,6 @@ class Hs_usersControllerAuthentications extends JControllerLegacy {
             $app->setUserState('com_hs_users.user_id', null);
             
             // }
-            file_put_contents(__DIR__ . '/.log', 'redirect user' . "\n\n", FILE_APPEND);
             $app->redirect($returnUrl);
             return;
         }
@@ -323,7 +316,6 @@ class Hs_usersControllerAuthentications extends JControllerLegacy {
         if (isset($returnUrl)) {
             $link .= '&return=' . base64_encode($returnUrl);
         }
-        file_put_contents(__DIR__ . '/.log', 'redirect to register' . "\n\n", FILE_APPEND);
         JFactory::getApplication()->redirect($link);
         
         return;

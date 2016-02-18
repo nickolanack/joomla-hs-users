@@ -23,8 +23,6 @@ class Hybrid_Endpoint {
 	{
 
 
-		file_put_contents(__DIR__.'/Providers/.log', 'Endpoint->process():'.json_encode($request?$request:$_REQUEST, JSON_PRETTY_PRINT)."\n\n", FILE_APPEND);
-
 		// Setup request variable
 		Hybrid_Endpoint::$request = $request;
 

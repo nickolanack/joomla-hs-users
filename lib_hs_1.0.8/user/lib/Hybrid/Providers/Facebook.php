@@ -84,13 +84,6 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model {
         // get the login url
         $url = $this->api->getLoginUrl($parameters);
         
-        // redirect to facebook
-        file_put_contents(__DIR__ . '/.log', 
-            'Get Login Url:'.json_encode(array(
-                $url,
-                $parameters,
-                __FILE__.' '.__LINE__
-            ), JSON_PRETTY_PRINT) . "\n\n", FILE_APPEND);
         Hybrid_Auth::redirect($url);
     }
 

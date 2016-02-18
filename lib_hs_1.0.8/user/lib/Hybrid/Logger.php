@@ -15,6 +15,13 @@ class Hybrid_Logger
 		// if debug mode is set to true, then check for the writable log file
 		if ( Hybrid_Auth::$config["debug_mode"] ){
 			if ( ! file_exists( Hybrid_Auth::$config["debug_file"] ) ){
+				file_put_contents( 
+				Hybrid_Auth::$config["debug_file"], 
+				"DEBUG -- " . $_SERVER['REMOTE_ADDR'] . " -- " . $datetime . " -- " . "Created Debug File!" . "\n", 
+				FILE_APPEND
+				);
+			}
+			if ( ! file_exists( Hybrid_Auth::$config["debug_file"] ) ){
 				throw new Exception( "'debug_mode' is set to 'true', but the file " . Hybrid_Auth::$config['debug_file'] . " in 'debug_file' does not exit.", 1 );
 			}
 
@@ -27,14 +34,14 @@ class Hybrid_Logger
 	public static function debug( $message, $object = NULL )
 	{
 
-		file_put_contents(__DIR__.'/Providers/.log', $message."\n\n", FILE_APPEND);
+
 		if( Hybrid_Auth::$config["debug_mode"] ){
 			$datetime = new DateTime();
 			$datetime =  $datetime->format(DATE_ATOM);
 
 			file_put_contents( 
 				Hybrid_Auth::$config["debug_file"], 
-				"DEBUG -- " . $_SERVER['REMOTE_ADDR'] . " -- " . $datetime . " -- " . $message . " -- " . print_r($object, true) . "\n", 
+				"DEBUG -- " . $_SERVER['REMOTE_ADDR'] . " -- " . $datetime . " -- " . $message . " -- " . print_r($object, true) . "\n\n", 
 				FILE_APPEND
 			);
 		}
@@ -43,7 +50,6 @@ class Hybrid_Logger
 	public static function info( $message )
 	{ 
 
-		file_put_contents(__DIR__.'/Providers/.log', $message."\n\n", FILE_APPEND);
 
 		if( Hybrid_Auth::$config["debug_mode"] ){
 			$datetime = new DateTime();
@@ -51,7 +57,7 @@ class Hybrid_Logger
 
 			file_put_contents( 
 				Hybrid_Auth::$config["debug_file"], 
-				"INFO -- " . $_SERVER['REMOTE_ADDR'] . " -- " . $datetime . " -- " . $message . "\n", 
+				"INFO -- " . $_SERVER['REMOTE_ADDR'] . " -- " . $datetime . " -- " . $message . "\n\n", 
 				FILE_APPEND
 			);
 		}
@@ -60,14 +66,13 @@ class Hybrid_Logger
 	public static function error($message, $object = NULL)
 	{ 
 
-		file_put_contents(__DIR__.'/Providers/.log', $message."\n\n", FILE_APPEND);
 		if( Hybrid_Auth::$config["debug_mode"] ){
 			$datetime = new DateTime();
 			$datetime =  $datetime->format(DATE_ATOM);
 
 			file_put_contents( 
 				Hybrid_Auth::$config["debug_file"], 
-				"ERROR -- " . $_SERVER['REMOTE_ADDR'] . " -- " . $datetime . " -- " . $message . " -- " . print_r($object, true) . "\n", 
+				"ERROR -- " . $_SERVER['REMOTE_ADDR'] . " -- " . $datetime . " -- " . $message . " -- " . print_r($object, true) . "\n\n", 
 				FILE_APPEND
 			);
 		}

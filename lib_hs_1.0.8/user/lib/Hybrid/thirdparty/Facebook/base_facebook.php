@@ -881,10 +881,7 @@ abstract class BaseFacebook {
         }
         
         $url = $this->getUrl($domainKey, $path);
-        // file_put_contents(__DIR__ . '/.log', json_encode(array(
-        // $url,
-        // $params
-        // )) . "\n\n", FILE_APPEND);
+
         $result = json_decode($this->_oauthRequest($url, $params), true);
         
         // results are returned, errors are thrown
@@ -972,11 +969,6 @@ abstract class BaseFacebook {
             $result = curl_exec($ch);
         }
         
-        file_put_contents(dirname(dirname(__DIR__)) . '/Providers/.log', 'Request: '.json_encode(array(
-            $opts,
-            $result,
-            __FILE__.' '.__LINE__
-        ),JSON_PRETTY_PRINT) . "\n\n", FILE_APPEND);
         
         // With dual stacked DNS responses, it's possible for a server to
         // have IPv6 enabled but not have IPv6 connectivity. If this is
@@ -997,6 +989,20 @@ abstract class BaseFacebook {
             }
         }
         
+        if(class_exists('Hybrid_Logger')){
+            Hybrid_Logger::info('FB:Request:Response'.print_r(array($url, $result),true));
+        }
+        if($result{0}=='{'){
+            $resultOb=json_decode($result);
+            if(key_exists('error',$resultOb)){
+
+                if(class_exists('Hybrid_Logger')){
+                    Hybrid_Logger::error('FB:Error'.print_r($resultOb,true));
+                }
+
+            }
+        }
+
         if ($result === false) {
             $e = new FacebookApiException(
                 array(

@@ -91,10 +91,12 @@ class HsUserHybridConfig
 			//$config['base_url']	= JUri::base().'index.php?option=com_hs_users&task=authentications.endpoint';	
 			$config['base_url']	= JRoute::_('index.php?option=com_hs_users&task=authentications.endpoint',false,-1);
 			
-			file_put_contents(__DIR__.'/Hybrid/Providers/.log', 'config: '.$config['base_url'].(json_encode($_SERVER,JSON_PRETTY_PRINT))."\n\n", FILE_APPEND);
+		
 
 			if($_SERVER['HTTPS']==="on"){
-				$config['base_url']=str_replace('http://', 'https://', $config['base_url']);
+				//this is really anoying to me.
+				//
+				//$config['base_url']=str_replace('http://', 'https://', $config['base_url']);
 			}
 			//debug
 			//
