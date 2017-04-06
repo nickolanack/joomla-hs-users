@@ -99,16 +99,16 @@ class HsUserHybridConfig
             self::$config = $config;
         }
 
-        if ($_SERVER['HTTPS'] === "on" && strpos($config["base_url"], 'http://') === 0) {
+        if ($_SERVER['HTTPS'] === "on" && strpos(self::$config["base_url"], 'http://') === 0) {
 
-            if ($config['debug_mode']) {
-                file_put_contents($config['debug_file'], '$SERVER["HTTP"] = "on", so why is $config["base_url"] set to http' . "\n\n", FILE_APPEND);
-                file_put_contents($config['debug_file'], 'Replace http:// with https:// in ' . $config['base_url'] . "\n\n", FILE_APPEND);
+            if (self::$config['debug_mode']) {
+                file_put_contents(self::$config['debug_file'], '$SERVER["HTTP"] = "on", so why is $config["base_url"] set to http' . "\n\n", FILE_APPEND);
+                file_put_contents(self::$config['debug_file'], 'Replace http:// with https:// in ' . self::$config['base_url'] . "\n\n", FILE_APPEND);
             }
 
             //this is really anoying to me.
             //
-            $config['base_url'] = str_replace('http://', 'https://', $config['base_url']);
+            self::$config['base_url'] = str_replace('http://', 'https://', self::$config['base_url']);
         }
 
         return self::$config;
